@@ -35,13 +35,14 @@ We can confirm the group entry in the /etc/group file
 ![confirm group entry](./images/confirm%20group%20entry.png)  
 Then attach the user to the group using the `usermod [OPTION][GROUPS] username` command  
 `usermod -aG altschool abdulhakeem`: This will -a append abdulhakeem user to altschool -G group members.  
-![add user to group](./images/attach%20user%20to%20a%20group.png)
+![add user to group](./images/attach%20user%20to%20a%20group.png)  
 We have been able to create our group, added a user to it, and confirm the entry in `/etc/group` file.
 
 ### Step 5: Allow altschool group to be able to run only cat command in the /etc directory.
 
 To set a specific access right for users or group on a particular directory, it is required that such access be defined in the `/etc/sudoers` file.
-From the terminal: cd into /etc directory `cd /etc` then: do `sudo vi sudoers` this opens the sudoers file with a text editor, then you can append the rule on a new line, if you wish you can also add comments above as shown in the example below `%altschool ALL=(ALL) /bin/cat /etc/*` and save the file.  
+**From the terminal**: cd into /etc directory `cd /etc` then: do `sudo vi sudoers` this opens the sudoers file with a text editor, then you can append the rule on a new line, if you wish you can also add comments above as shown in the example below.  
+`%altschool ALL=(ALL) /bin/cat /etc/*`: This will give every member of altschool group the access to cat any file in the `/etc` directory only. You can then save the file.  
 ![set privilege permission](./images/set%20group%20sudo%20privilege.png)
 
 To confirm that the privilege access we gave to altschool members was applied, we can switch to the user and try to cat the `etc/sudoers` file.  
