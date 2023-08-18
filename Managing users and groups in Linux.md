@@ -33,7 +33,7 @@ To create a group, we use the `groupadd` command.
 ![create altschool group](./images/create%20a%20group.png)  
 We can confirm the group entry in the /etc/group file  
 ![confirm group entry](./images/confirm%20group%20entry.png)  
-Then attach the user to the group using the `usermod [OPTION][GROUPS]` username command  
+Then attach the user to the group using the `usermod [OPTION][GROUPS] username` command  
 `usermod -aG altschool abdulhakeem`: This will -a append abdulhakeem user to altschool -G group members.  
 ![add user to group](./images/attach%20user%20to%20a%20group.png)
 We have been able to create our group, added a user to it, and confirm the entry in `/etc/group` file.
