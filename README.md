@@ -1,8 +1,4 @@
-# Users_and_Groups_in_Linux
-
-Managing Users and Groups in Linux
-
-## This writeup talks about:
+## This writeup talks about managing Users and Grous in Linux:
 
     How to create a user in Linux
     How to set an expiry date for a user account (here it’s 2 weeks but it could be more than)
